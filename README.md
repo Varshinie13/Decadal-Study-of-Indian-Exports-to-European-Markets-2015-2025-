@@ -1,6 +1,3 @@
-# Decadal-Study-of-Indian-Exports-to-European-Markets-2015-2025-
-Python project analyzing Indo-European export data (2015–2025) featuring data cleaning, visualization, and trade trend insights.
-
 # Decadal Study of Indian Exports to European Markets (2015-2025)
 
 ## About This Project
@@ -12,26 +9,6 @@ covering data cleaning, visualization, and trade trend insights.
 - **Size:** ~428 MB
 - **Stored using:** Git LFS (Large File Storage), since GitHub's normal 
   file limit is 100MB
-
-## How to Access the Dataset
-
-### Option 1: Download directly from GitHub
-Click on the dataset file above → click **Download** button on the file page.
-
-### Option 2: Pull into Google Colab (recommended for this project)
-```python
-# Install and enable Git LFS in Colab
-!apt-get install git-lfs -y
-!git lfs install
-
-# Clone this repository
-!git clone https://github.com/Varshinie13/Decadal-Study-of-Indian-Exports-to-European-Markets-2015-2025-.git
-
-# Load the dataset with pandas
-import pandas as pd
-exports = pd.read_csv("/content/Decadal-Study-of-Indian-Exports-to-European-Markets-2015-2025-/Decadal-Study-of-Indian-Exports-to-European-Markets-2015-2025-.csv")
-exports.head()
-```
 
 ## How the Dataset Was Uploaded (Git Bash Workflow)
 
@@ -52,7 +29,6 @@ git lfs install
 
 # 4. Track large file types
 git lfs track "*.csv"
-git lfs track "*.xls"
 git add .gitattributes
 git commit -m "Configure Git LFS tracking"
 
