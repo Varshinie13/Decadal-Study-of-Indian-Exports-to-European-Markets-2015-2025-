@@ -10,6 +10,28 @@ covering data cleaning, visualization, and trade trend insights.
 - **Stored using:** Git LFS (Large File Storage), since GitHub's normal 
   file limit is 100MB
 
+## Dataset Column Details:
+
+## Dataset Column Description
+
+| Column | Description |
+|---|---|
+| `id` | Unique identifier for each record in the dataset |
+| `date` | Date of the export transaction (month/year) |
+| `country_name` | Full name of the destination country (e.g., Germany, France) |
+| `alpha_3_code` | ISO 3-letter country code (e.g., DEU, FRA) |
+| `country_code` | Internal/numeric code identifying the country |
+| `region` | Broad geographical region (e.g., Europe) |
+| `region_code` | Numeric code representing the region |
+| `sub_region` | Finer regional grouping (e.g., Western Europe, Northern Europe) |
+| `sub_region_code` | Code representing the sub-region |
+| `hs_code` | Harmonized System Code — international standard for classifying traded products |
+| `commodity` | Name/description of the exported product |
+| `unit` | Unit of measurement for quantity (e.g., KG, MT, NOS) |
+| `value_qt` | Quantity of the commodity exported, in the specified unit |
+| `value_rs` | Export value in Indian Rupees (₹) |
+| `value_dl` | Export value in US Dollars ($) |
+
 ## How the Dataset Was Uploaded (Git Bash Workflow)
 
 Since the dataset exceeds GitHub's 100MB file limit, Git LFS was used 
