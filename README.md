@@ -64,7 +64,13 @@ git push
 ```
 
 
-## How the Dataset read in Python - Colab Work Space
+## How the Dataset is Read in Python (Google Colab Workspace)
+
+This section explains how the dataset is loaded into a Google Colab 
+notebook directly from this GitHub repository, using Git LFS since 
+the file exceeds GitHub's normal 100MB size limit.
+
+```python
 # ============================================
 # STEP 1: Install Git LFS (Large File Storage)
 # Needed because our dataset files are too big for normal GitHub storage
@@ -103,7 +109,6 @@ df = pd.read_csv("/content/Decadal-Study-of-Indian-Exports-to-European-Markets-2
 df.head()
 
 # ============================================
-
 # STEP 7: Basic info about the dataset
 # Shows column names, data types, and missing values — useful first check before analysis
 # ============================================
@@ -114,6 +119,11 @@ df.info()
 # Gives count, mean, min, max, etc. for numeric columns — quick overview of the data
 # ============================================
 df.describe()
+```
+
+### How to Run This Yourself
+1. Open a new notebook in [Google Colab](https://colab.research.google.com/)
+2. Copy the code above into
 
 ## Tools Used:
 
