@@ -63,11 +63,65 @@ git commit -m "Add exports dataset via Git LFS"
 git push
 ```
 
-## Tools Used
+
+## How the Dataset read in Python - Colab Work Space
+# ============================================
+# STEP 1: Install Git LFS (Large File Storage)
+# Needed because our dataset files are too big for normal GitHub storage
+# ============================================
+!apt-get install git-lfs -y
+!git lfs install
+
+# ============================================
+# STEP 2: Clone the GitHub repository into Colab
+# This downloads all project files (code + datasets) from GitHub
+# ============================================
+!git clone https://github.com/Varshinie13/Decadal-Study-of-Indian-Exports-to-European-Markets-2015-2025-.git
+
+# ============================================
+# STEP 3: Check what files actually got downloaded
+# Useful to confirm the dataset file is present and full-sized (not a tiny LFS pointer file)
+# ============================================
+!ls -la "/content/Decadal-Study-of-Indian-Exports-to-European-Markets-2015-2025-/"
+
+# ============================================
+# STEP 4: Import pandas
+# pandas is the main library used to read, clean, and analyze tabular data (like Excel/CSV)
+# ============================================
+import pandas as pd
+
+# ============================================
+# STEP 5: Load the exports dataset into a DataFrame
+# A DataFrame is like a table/spreadsheet that Python can work with
+# ============================================
+df = pd.read_csv("/content/Decadal-Study-of-Indian-Exports-to-European-Markets-2015-2025-/Decadal-Study-of-Indian-Exports-to-European-Markets-2015-2025-.csv")
+
+# ============================================
+# STEP 6: Preview the first 5 rows
+# Helps confirm the data loaded correctly and shows the column names/structure
+# ============================================
+df.head()
+
+# ============================================
+
+# STEP 7: Basic info about the dataset
+# Shows column names, data types, and missing values — useful first check before analysis
+# ============================================
+df.info()
+
+# ============================================
+# STEP 8: Summary statistics
+# Gives count, mean, min, max, etc. for numeric columns — quick overview of the data
+# ============================================
+df.describe()
+
+## Tools Used:
+
 - **Python** (pandas) — data loading and analysis
 - **Google Colab** — cloud-based Python environment for the project
 - **Git & Git LFS** — version control and large file storage
 - **GitHub** — hosting the project code and dataset
 
-## Project Status
+## Project Status:
+
 🚧 In progress — data cleaning and visualization stages ongoing.
